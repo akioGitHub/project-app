@@ -1,2 +1,55 @@
-<h1>Projects#index</h1>
-<p>Find me in app/views/projects/index.html.erb</p>
+<header class='header'>
+  <div class='over-header'>
+    <div class='logo'>
+      <%= link_to 'story', root_path, class: "top-link" %>
+    </div>
+    <div class='project'>
+      <%= link_to 'プロジェクトをはじめる', '#', class: "project-form" %>
+      <div class='search-form'>プロジェクトを探す</div>
+    </div>
+    <ul class='user'>
+      <li><%= link_to 'ログイン', '#', class: "login" %></li>
+      <li><%= link_to '新規登録', '#', class: "sign-up" %></li>
+    </ul>
+  </div>
+  <div class='under-header'>
+    <ul class='categories'>
+      <li><%= link_to '全て', '#', class: "category" %></li>
+      <li><%= link_to '商品開発', '#', class: "category" %></li>
+      <li><%= link_to '広告', '#', class: "category" %></li>
+      <li><%= link_to 'アート', '#', class: "category" %></li>
+      <li><%= link_to '流通', '#', class: "category" %></li>
+      <li><%= link_to '芸能', '#', class: "category" %></li>
+      <li><%= link_to '政治', '#', class: "category" %></li>
+      <li><%= link_to '地域活性化', '#', class: "category" %></li>
+      <li><%= link_to 'エンターテイメント', '#', class: "category" %></li>
+      <li><%= link_to 'スポーツ', '#', class: "category" %></li>
+      <li><%= link_to '美容', '#', class: "category" %></li>
+      <li><%= link_to 'ファッション', '#', class: "category" %></li>
+      <li><%= link_to '飲食', '#', class: "category" %></li>
+      <li><%= link_to 'チャリティー', '#', class: "category" %></li>
+      <li><%= link_to 'その他', '#', class: "category" %></li>
+    </ul>
+    <ul class='others-search'>
+      <li><%= link_to '地域', '#', class: 'prefecture' %></li>
+      <li><%= link_to 'プロジェクトの状態', '#', class: 'condition' %></li>
+      </div>
+    </ul>
+  </div>
+</header>
+<div class='main'>
+  
+  <div class='top-projects'>
+    <div class='latest-project'></div>
+    <div class='new-projects'>
+      <div class='over-new-projects'>
+        <div class='left-project'></div>
+        <div class='right-project'></div>
+      </div>
+      <div class='under-new-projects'>
+        <div class='left-project'></div>
+        <div class='right-project'></div>
+      </div>
+    </div>
+  </div>
+</div>
