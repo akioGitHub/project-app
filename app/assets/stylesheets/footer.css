@@ -1,0 +1,13 @@
+/* フッター */
+.footer {
+  height: 10vh;
+  background-color: #222222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: #DDDDDD;
+}
