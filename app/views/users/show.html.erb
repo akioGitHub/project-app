@@ -1,0 +1,30 @@
+<%= render "shared/header" %>
+
+<div class="user-show">
+  <div class="user-box">
+    <h2 class="name">
+      <%= "ニックネーム： #{@user.nickname}" %>
+    </h2>
+    <div class="user-black-btn">
+      <%= link_to "ユーザー情報の編集", edit_user_registration_path(current_user), method: :get, class: "user-edit" %>
+    </div>
+    <table class="detail-table">
+      <tbody>
+        <tr>
+          <th class="detail-user">ニックネーム</th>
+          <td class="detail-user-data"><%= "#{@user.nickname}" %></td>
+        </tr>
+        <tr>
+          <th class="detail-user">性別</th>
+          <td class="detail-user-data"><%= "#{@user.sex.name}" %></td>
+        </tr>
+        <tr>
+          <th class="detail-user">誕生日</th>
+          <td class="detail-user-data"><%= @user.birthday %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<%= render "shared/footer" %>
