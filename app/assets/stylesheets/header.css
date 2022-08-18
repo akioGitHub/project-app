@@ -1,0 +1,85 @@
+/* ヘッダー上 */
+
+.header {
+  height: 15vh;
+  background-color: #222222;
+}
+
+.top-link {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  color: #DDDDDD;
+}
+.over-header {
+  height: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.project {
+  display: flex;
+}
+
+.project-form {
+  margin-right: 30px;
+}
+
+.search-form {
+  color: #DDDDDD;
+}
+
+.user {
+  display: flex;
+  list-style: none;
+}
+
+.login {
+  margin-right: 10px;
+}
+
+.user-nickname {
+  margin-right: 10px;
+}
+
+/* ヘッダー下 */
+
+.under-header {
+  height: 40%;
+  background-color: #555555;
+}
+
+.categories {
+  height: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  margin: auto 10px;
+}
+
+.categories li+li{
+  border-left: 1px solid #999;
+}
+
+.category {
+  width: 30px;
+  font-size: 18px;
+  padding: 0 auto;
+}
+
+.others-search {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+  list-style: none;
+}
+
+.prefecture {
+  margin-right: 20px;
+}
