@@ -2,7 +2,7 @@
 <div class="projects-contents">
   <div class="projects-contents-main">
     <h2 class="projects-contents-title">プロジェクトの内容を入力</h2>
-    <%= form_with(model: @affiliation, url: projects_path, local: true, id:"new_project_image") do |f| %>
+    <%= form_with(model: @project, url: projects_path, local: true, id:"new_project_image") do |f| %>
 
     <%= render 'shared/error_messages', model: f.object %>
 
@@ -17,7 +17,7 @@
         </p>
         <div id="previews"></div>
         <div class= "click_upload">
-          <%= f.file_field :images, id:"project-image", name: 'affiliation[images][]', data: {index: 0} %>
+          <%= f.file_field :image %>
         </div>
       </div>
     </div>
@@ -26,19 +26,19 @@
         プロジェクト名
         <span class="indispensable">必須</span>
       </div>
-      <%= f.text_area :project_name, class:"projects-text", id:"project-name", placeholder:"タイトル（必須 40文字まで)", maxlength:"40" %>
+      <%= f.text_area :title, class:"projects-text", id:"project-name", placeholder:"タイトル（必須 40文字まで)", maxlength:"40" %>
       <div class="projects-explain">
         <div class="weight-bold-text">
           プロジェクト詳細1
           <span class="indispensable">必須</span>
         </div>
-        <%= f.text_area :detail, class:"projects-text", id:"project-info", placeholder:"プロジェクトの詳細1（必須 1,000文字まで）" ,rows:"7" ,maxlength:"1000" %>
+        <%= f.text_area :first_detail, class:"projects-text", id:"project-info", placeholder:"プロジェクトの詳細1（必須 1,000文字まで）" ,rows:"7" ,maxlength:"1000" %>
       </div>
       <div class="projects-explain">
         <div class="weight-bold-text">
           プロジェクト詳細２
         </div>
-        <%= f.text_area :detail, class:"projects-text", id:"project-info", placeholder:"プロジェクトの詳細2（任意 1,000文字まで）" ,rows:"7" ,maxlength:"1000" %>
+        <%= f.text_area :second_detail, class:"projects-text", id:"project-info", placeholder:"プロジェクトの詳細2（任意 1,000文字まで）" ,rows:"7" ,maxlength:"1000" %>
       </div>
     </div>
 
@@ -61,16 +61,26 @@
         </div>
         <%= f.collection_select(:select_donation_id, SelectDonation.all, :id, :name, {include_blank: "---"}, {class:"select-box", id:"select-donation"}) %>
         
-        <div>
-          <div class="donation-target-amount">
-            <div class="donation-text">
-              <span>支援金目標額（支援を募集される場合はご入力ください）</span>
-            </div>
-            <span class="donation-target-yen">¥</span>
-            <%= f.text_field :donation_target_amount, class:"donation-target-input", id:"donation-target", placeholder:"例）1,000,000" %>
+        <div class="donation-target-amount">
+          <div class="donation-text">
+            <span>支援金目標額（支援を募集される場合はご入力ください）</span>
           </div>
+          <span class="donation-target-yen">¥</span>
+          <%= f.text_field :donation_target_amount, class:"donation-target-input", id:"donation-target", placeholder:"例）1,000,000" %>
         </div>
 
+        <div class="select-project-member">
+          <div class="project-member-text">
+            <span>プロジェクト参加者</span>
+          </div>
+          <select name="project[user_ids][]">
+            <option value="">プロジェクト参加者を選択してください</option>
+            <% User.where.not(id: current_user.id).each do |user| %>
+              <option value=<%= user.id %>><%= user.nickname %></option>
+            <% end %>
+          </select>
+          <input name="project[user_ids][]" type="hidden" value=<%= current_user.id %>>
+        </div>
       </div>
     </div>
 

@@ -1,5 +1,5 @@
 .projects-contents {
-  background-color: #f5f5f5;
+  background-color: #444444;
   font-family: "Source Sans Pro", Helvetica, Arial, "æ¸¸ã‚´ã‚·ãƒƒã‚¯ä½“", "YuGothic", "ãƒ¡ã‚¤ãƒªã‚ª", "Meiryo", sans-serif;
   font-size: 14px;
   display: flex;
@@ -10,6 +10,7 @@
 
 .projects-contents-main {
   background-color: #FFF;
+  width: 60vw;
   min-width: 450px;
   padding: 10vh 15vw;
 }
@@ -84,7 +85,7 @@
 }
 
 .projects-detail>.form {
-  width: 300px;
+  width: 60%;
   padding: 2vh 0;
 }
 
@@ -93,8 +94,7 @@
 }
 
 .donation-target-amount {
-  width: 300px;
-  border-bottom: 1px solid #ccc;
+  width: 60%;
   padding: 10px;
   display: flex;
   align-items: center;

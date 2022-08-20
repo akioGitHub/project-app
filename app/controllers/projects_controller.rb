@@ -3,14 +3,13 @@ class ProjectsController < ApplicationController
   end
 
   def new
-    @affiliation = Affiliation.new
+    @project = Project.new
     redirect_to new_user_session_path unless user_signed_in?
   end
 
   def create
-    @affiliation = Affiliation.new(affiliation_params)
-    if @affiliation.valid?
-      @affiliation.save
+    @project = Project.new(project_params)
+    if @project.save!
       redirect_to root_path
     else
       render :new
@@ -20,9 +19,9 @@ class ProjectsController < ApplicationController
 
   private
 
-  def affiliation_params
-    params.require(:affiliation).permit(:title, :first_detail, :second_detail, :category_id, :select_donation_id, :donation_target_amount_id, :prefecture_id,
-                                  {images: []}).merge(user_id: current_user.id)
+  def project_params
+    params.require(:project).permit(:title, :image, :first_detail, :second_detail, :category_id, :select_donation_id, :donation_target_amount,
+                                    :prefecture_id, user_ids: [])
   end
 
 end
