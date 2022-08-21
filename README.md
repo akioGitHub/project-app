@@ -142,7 +142,7 @@ Things you may want to cover:
 | -------------- | ---------- | ------------------------------ |
 | post_code      | string     | null: false                    |
 | prefecture_id  | integer    | null: false                    |
-| municipalities | string     | null: false                    |
+| municipality   | string     | null: false                    |
 | house_number   | string     | null: false                    |
 | building_name  | string     |                                |
 | phone_number   | string     | null: false                    |
