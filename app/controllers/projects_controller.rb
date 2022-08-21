@@ -1,5 +1,6 @@
 class ProjectsController < ApplicationController
   def index
+    @latest_project = Project.order(updated_at: :desc).limit(1)
   end
 
   def new
@@ -9,7 +10,7 @@ class ProjectsController < ApplicationController
 
   def create
     @project = Project.new(project_params)
-    if @project.save!
+    if @project.save
       redirect_to root_path
     else
       render :new

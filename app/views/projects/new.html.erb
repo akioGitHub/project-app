@@ -4,7 +4,7 @@
     <h2 class="projects-contents-title">プロジェクトの内容を入力</h2>
     <%= form_with(model: @project, url: projects_path, local: true, id:"new_project_image") do |f| %>
 
-    <%= render 'shared/error_messages', model: f.object %>
+    <%= render 'shared/error_messages', resource: @project %>
 
     <div class="img-upload">
       <div class="weight-bold-text">
