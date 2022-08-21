@@ -2,7 +2,24 @@
 <div class='main'>
 
   <div class='top-projects'>
-    <div class='latest-project'></div>
+    <div class='latest-project'>
+      <% @latest_project.each do |latest_project| %>
+        <%# <%= link_to("#", class: 'latest-project-link') do %>
+          <div class='latest-project-img-content'>
+            <%= image_tag latest_project.image, class: "latest-project-img" %>
+            <div class='img-under-bar'></div>
+          </div>
+          <div class='latest-project-detail-content'>
+            <div class='latest-project-title'>
+              <%= latest_project.title %>
+            </div>
+            <div class='latest-project-donation'>
+              <p class='latest-project-donation-outcome'>現在    円  支援者数    人</p>
+            </div>
+          </div>
+        <% end %>
+      <%# <% end %>
+    </div>
     <div class='new-projects'>
       <div class='over-new-projects'>
         <div class='left-project'></div>
@@ -15,4 +32,5 @@
     </div>
   </div>
 </div>
+
 <%= render "shared/footer"%>

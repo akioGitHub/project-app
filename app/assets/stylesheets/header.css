@@ -69,7 +69,7 @@ a {
 
 .category {
   width: 30px;
-  font-size: 18px;
+  font-size: 1vw;
   padding: 0 auto;
 }
 
@@ -78,6 +78,7 @@ a {
   justify-content: center;
   margin-top: 5px;
   list-style: none;
+  font-size: 1.2vw;
 }
 
 .prefecture {

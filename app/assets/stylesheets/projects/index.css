@@ -8,8 +8,7 @@
   height: 450px;
   display: flex;
   justify-content: space-between;
-  padding: 10px 50px 0;
-  
+  padding: 10px 50px 0; 
 }
 
 .latest-project {
@@ -17,6 +16,50 @@
   height: 100%;
   background-color: aliceblue;
   margin-right: 20px;
+  position: relative;
+}
+
+
+.latest-project-img-content {
+  height: 75%;
+  line-height: 0;
+}
+.latest-project-img {
+  height: 98%;
+  width: 100%;
+}
+
+.img-under-bar {
+  height: 2%;
+  background-color: #999999;
+}
+
+.latest-project-detail-content {
+  height: calc(25% - 10px);
+  position: relative;
+}
+
+.latest-project-title {
+  height: 15%;
+  width: 100%;
+  color: black;
+  font-weight: bold;
+  font-size: 2vw;
+  margin-top: 10px;
+}
+
+.latest-project-donation {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  color: black;
+  position: absolute;
+  bottom: 0;
+}
+
+.latest-project-donation-outcome {
+  position: absolute;
+  bottom: 0;
 }
 
 .new-projects {

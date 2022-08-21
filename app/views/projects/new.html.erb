@@ -1,0 +1,94 @@
+<%= render "shared/header"%>
+<div class="projects-contents">
+  <div class="projects-contents-main">
+    <h2 class="projects-contents-title">プロジェクトの内容を入力</h2>
+    <%= form_with(model: @project, url: projects_path, local: true, id:"new_project_image") do |f| %>
+
+    <%= render 'shared/error_messages', resource: @project %>
+
+    <div class="img-upload">
+      <div class="weight-bold-text">
+        商品画像
+        <span class="indispensable">必須</span>
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <div id="previews"></div>
+        <div class= "click_upload">
+          <%= f.file_field :image %>
+        </div>
+      </div>
+    </div>
+    <div class="new-projects">
+      <div class="weight-bold-text">
+        プロジェクト名
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :title, class:"projects-text", id:"project-name", placeholder:"タイトル（必須 40文字まで)", maxlength:"40" %>
+      <div class="projects-explain">
+        <div class="weight-bold-text">
+          プロジェクト詳細1
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :first_detail, class:"projects-text", id:"project-info", placeholder:"プロジェクトの詳細1（必須 1,000文字まで）" ,rows:"7" ,maxlength:"1000" %>
+      </div>
+      <div class="projects-explain">
+        <div class="weight-bold-text">
+          プロジェクト詳細２
+        </div>
+        <%= f.text_area :second_detail, class:"projects-text", id:"project-info", placeholder:"プロジェクトの詳細2（任意 1,000文字まで）" ,rows:"7" ,maxlength:"1000" %>
+      </div>
+    </div>
+
+    <div class="projects-detail">
+      <div class="weight-bold-text">プロジェクトの詳細</div>
+      <div class="form">
+
+        <div class="weight-bold-text">
+          カテゴリー
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:category_id, Category.all, :id, :name, {include_blank: "---"}, {class:"select-box", id:"project-category"}) %>
+        <div class="weight-bold-text">
+          地域
+        </div>
+        <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {include_blank: "---"}, {class:"select-box", id:"project-prefecture"}) %>
+        <div class="weight-bold-text">
+          支援の募集
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:select_donation_id, SelectDonation.all, :id, :name, {include_blank: "---"}, {class:"select-box", id:"select-donation"}) %>
+        
+        <div class="donation-target-amount">
+          <div class="donation-text">
+            <span>支援金目標額（支援を募集される場合はご入力ください）</span>
+          </div>
+          <span class="donation-target-yen">¥</span>
+          <%= f.text_field :donation_target_amount, class:"donation-target-input", id:"donation-target", placeholder:"例）1,000,000" %>
+        </div>
+
+        <div class="select-project-member">
+          <div class="project-member-text">
+            <span>プロジェクト参加者</span>
+          </div>
+          <select name="project[user_ids][]">
+            <option value="">プロジェクト参加者を選択してください</option>
+            <% User.where.not(id: current_user.id).each do |user| %>
+              <option value=<%= user.id %>><%= user.nickname %></option>
+            <% end %>
+          </select>
+          <input name="project[user_ids][]" type="hidden" value=<%= current_user.id %>>
+        </div>
+      </div>
+    </div>
+
+    <div class="projects-btn-contents">
+      <%= f.submit "はじめる" ,class:"projects-btn" %>
+      <%=link_to 'もどる', root_path, class:"back-btn" %>
+    </div>
+    <% end %>
+  </div>
+</div>
+<%= render "shared/footer"%>

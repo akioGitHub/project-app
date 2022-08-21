@@ -37,6 +37,7 @@ Things you may want to cover:
 
 ### Association
 
+- has_many :affiliations
 - has_many :projects, through: :affiliations
 - has_many :tasks, through: :processes
 - has_many :rooms, through: :entering_the_rooms
@@ -57,6 +58,7 @@ Things you may want to cover:
 
 ### Association
 
+- has_many :affiliations
 - has_many :users, through: :affiliations
 - has_many :rooms
 - has_many :donations
