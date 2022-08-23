@@ -1,0 +1,38 @@
+<%= render "shared/header" %>
+<div class='project-show-contents'>
+  <div class='project-title'><%= @project.title %></div>
+  <div class='project-first-contents'>
+    <div class='project-img'>
+      <%= image_tag @project.image, class: 'project-main-img' %>
+      <div class='project-meta-data'>
+        <div class='project-data'><%= @project.category.name%></div>
+        <% if @project.prefecture.name.present?%>
+          <div class='project-data'><%= @project.prefecture.name%></div>
+        <% end %>
+      </div>
+    </div>
+    <div class='project-status'>
+      <div class='project-donation-amount-status'>
+        <p>現在の支援金額</p>
+        <div class='now-donation-amount'>100000000円</div>
+        <p>目標金額 <%= @project.donation_target_amount%>円</p>
+      </div>
+      <div class='project-donation-outcome-status'>
+        <p>支援者数</p>
+        <div class='now-donation-amount'>100人</div>
+      </div>
+      <div class='donation-button-content'>
+        <div class='donation-button'>
+          <%= link_to project_donations_path(@project.id) do %>
+            <p class='click-donation'>プロジェクトを支援する</p>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class='project-second-contents'>
+    <div class='project-detail'><%= @project.first_detail%></div>
+    <div class='project-detail'><%= @project.second_detail%></div>
+  </div>
+</div>
+<%= render "shared/footer"%>

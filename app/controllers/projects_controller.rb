@@ -8,6 +8,10 @@ class ProjectsController < ApplicationController
     redirect_to new_user_session_path unless user_signed_in?
   end
 
+  def show
+    @project = Project.find(params[:id])
+  end
+
   def create
     @project = Project.new(project_params)
     if @project.save

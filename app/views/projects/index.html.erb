@@ -4,7 +4,7 @@
   <div class='top-projects'>
     <div class='latest-project'>
       <% @latest_project.each do |latest_project| %>
-        <%# <%= link_to("#", class: 'latest-project-link') do %>
+        <%= link_to project_path(latest_project.id) do %>
           <div class='latest-project-img-content'>
             <%= image_tag latest_project.image, class: "latest-project-img" %>
             <div class='img-under-bar'></div>
@@ -18,7 +18,7 @@
             </div>
           </div>
         <% end %>
-      <%# <% end %>
+      <% end %>
     </div>
     <div class='new-projects'>
       <div class='over-new-projects'>
