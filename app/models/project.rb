@@ -2,6 +2,7 @@ class Project < ApplicationRecord
   has_many :affiliations
   has_many :donations
   has_many :users, through: :affiliations, validate: false
+  has_many :rooms
   has_one_attached :image
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :category

@@ -2,6 +2,9 @@ class User < ApplicationRecord
   has_many :affiliations
   has_many :projects, through: :affiliations
   has_many :donations
+  has_many :entering_the_rooms
+  has_many :rooms, through: :entering_the_rooms
+  has_many :messages
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :sex
 
