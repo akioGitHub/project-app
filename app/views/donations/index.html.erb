@@ -5,7 +5,7 @@
     <%= form_with model: @donation_address, url: project_donations_path(@project.id), id: 'charge-form', class: 'donation-total-form',local: true do |f| %>
 
       <%= render 'shared/error_messages', resource: @donation_address %>
-      
+
       <div class='donation-individual-form'>
         <h1 class='info-input-haedline'>
           支援金額入力
@@ -57,7 +57,7 @@
           </div>
           <%= f.text_field :building_name, class:"donation-input-default", id:"building", placeholder:"例）柳ビル103"%>
         </div>
-         <div class="donation-form">
+        <div class="donation-form">
           <div class='donation-form-text-wrap'>
             <label class="form-text">電話番号</label>
             <span class="indispensable">必須</span>
@@ -82,3 +82,4 @@
   </div>
 </div>
 <%= render "shared/footer"%> 
+

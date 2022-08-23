@@ -15,3 +15,4 @@ class DonationAddress
                    phone_number: phone_number, donation_id: donation.id)
   end
 end 
+

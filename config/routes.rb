@@ -7,3 +7,4 @@ Rails.application.routes.draw do
     resources :donations, only: [:index, :create]
   end
 end
+

@@ -1,6 +1,6 @@
 class Donation < ApplicationRecord
-  validates :price, presence: true
-
   belongs_to :project
+  belongs_to :user
   has_one :address
 end
+

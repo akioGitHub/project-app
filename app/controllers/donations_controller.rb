@@ -22,5 +22,5 @@ class DonationsController < ApplicationController
                                              :house_number, :building_name, :phone_number,
                                              :price).merge(user_id: current_user.id, project_id: @project.id)
   end
-
 end
+
