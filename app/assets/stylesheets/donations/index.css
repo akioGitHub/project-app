@@ -1,0 +1,92 @@
+.donation-main {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 40px;
+}
+
+.donation-form {
+  width: 70vw;
+}
+
+.donation-total-form {
+  background-color: #EEEEEE;
+  border: 1px solid #CCCCCC;
+  border-radius: 5px;
+}
+
+.donation-individual-form {
+  width: 50%;
+  border: 1px solid #DDDDDD;
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px 10px;
+  margin: 20px auto 0;
+}
+
+.donation-individual-form  > h1 {
+  margin-bottom: 20px;
+}
+
+.info-input-haedline {
+  text-align: center;
+}
+
+.donation-form {
+  width: 60%;
+  margin: auto;
+}
+
+.donation-input-default {
+width: 100%;
+margin: 10px 0 20px;
+height: 48px;
+padding: 10px 16px 8px;
+border-radius: 4px;
+border: 1px solid #ccc;
+background: #fff;
+font-size: 16px;
+resize: none;
+
+}
+
+.donation-btn {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.donation-black-btn {
+  width: 30%;
+  height: 70px;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+
+
+.donation-project-info {
+  width: 30%;
+  border: 1px solid #CCCCCC;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: #EEEEEE;
+}
+
+.donation-project-img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.donation-project-title {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.donation-project-outcome {
+  margin-top: 10px;
+}
