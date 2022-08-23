@@ -1,5 +1,6 @@
 class Project < ApplicationRecord
   has_many :affiliations
+  has_many :donations
   has_many :users, through: :affiliations, validate: false
   has_one_attached :image
   extend ActiveHash::Associations::ActiveRecordExtensions

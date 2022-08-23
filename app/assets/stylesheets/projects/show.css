@@ -1,0 +1,113 @@
+.project-show-contents {
+  background-color: #444444;
+  height: 1000px;
+}
+.project-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 32px;
+  color: white;
+  padding-top: 20px;
+}
+
+.project-first-contents {
+  height: 450px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.project-img {
+  height: 100%;
+  width: 45vw;
+}
+
+.project-meta-data {
+  display: flex;
+}
+
+.project-main-img {
+  height: 90%;
+  width: 45vw;
+  border-radius: 5px;
+}
+
+.project-data {
+  width: 80px;
+  height: 30px;
+  background-color: #AAAAAA;
+  margin: 5px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+}
+
+
+.project-status {
+  width: 45vw;
+  height: 100%;
+  background-color: #FFFFEE;
+  border-radius: 5px;
+  padding: 10px 10px 50px 10px;
+}
+
+.project-donation-amount-status > p {
+  color: #AAAAAA;
+  font-weight: bold;
+}
+
+.project-donation-amount-status {
+  width: 100%;
+  height: 50%;
+}
+
+.now-donation-amount {
+  font-size: 42px;
+  font-weight: bold;
+  margin: 15px 0 15px 10px;
+}
+
+.project-donation-outcome-status {
+  width: 100%;
+  height: 40%;
+}
+
+.project-donation-outcome-status > p {
+  color: #AAAAAA;
+  font-weight: bold;
+}
+.donation-button-content {
+  height: 10%;
+}
+
+.donation-button {
+  width: 50%;
+  height: 70px;
+  border: 1px solid black;
+  background-color: #AAAAAA;
+  border-radius: 5px;
+  margin: 0 0 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.click-donation {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+.project-second-contents {
+  margin: 30px;
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+}
+
+.project-detail {
+  margin-top: 20px;
+}

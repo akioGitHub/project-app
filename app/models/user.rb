@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   has_many :affiliations
   has_many :projects, through: :affiliations
+  has_many :donations
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :sex
 

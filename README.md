@@ -42,6 +42,7 @@ Things you may want to cover:
 - has_many :tasks, through: :processes
 - has_many :rooms, through: :entering_the_rooms
 - has_many :messages
+- has_many :donations
 
 
 ## projects テーブル
@@ -129,10 +130,12 @@ Things you may want to cover:
 | ------- | ---------- | ------------------------------ |
 | price   | integer    | null: false                    |
 | project | references | null: false, foreign_key: true |
+| user    | references | null: false, foreign_key: true |
 
 ### Association
 
 - belongs_to :project
+- belongs_to :user
 - has_one :address
 
 
@@ -142,7 +145,7 @@ Things you may want to cover:
 | -------------- | ---------- | ------------------------------ |
 | post_code      | string     | null: false                    |
 | prefecture_id  | integer    | null: false                    |
-| municipalities | string     | null: false                    |
+| municipality   | string     | null: false                    |
 | house_number   | string     | null: false                    |
 | building_name  | string     |                                |
 | phone_number   | string     | null: false                    |
