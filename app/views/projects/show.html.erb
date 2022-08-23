@@ -22,10 +22,13 @@
         <div class='now-donation-amount'>100人</div>
       </div>
       <div class='donation-button-content'>
-        <div class='donation-button'>
-          <%= link_to project_donations_path(@project.id) do %>
-            <p class='click-donation'>プロジェクトを支援する</p>
-          <% end %>
+        <div class='click-form'>
+          <div class='task-entrance'>
+            <%= link_to 'タスクを確認する', project_tasks_path(@project.id), class:'task-page-check' %>
+          </div>
+          <div class='project-donation-button'>
+          <%= link_to 'プロジェクトを支援する', project_donations_path(@project.id), class:'click-donation' %>
+          </div>
         </div>
       </div>
     </div>

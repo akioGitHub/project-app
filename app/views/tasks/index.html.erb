@@ -1,0 +1,26 @@
+<header class='header'>
+  <div class='over-header'>
+    <div class='logo'>
+      <%= link_to 'story', root_path, class: "top-link" %>
+    </div>
+    <div class='project'>
+      <%= link_to 'story-chat', "#", class: "chat-entrance" %>
+      <%= link_to 'タスクを投稿する', "#", class: "task-post" %>
+    </div>
+    <ul class='user'>
+      <li><%= link_to current_user.nickname, user_path(current_user), class: "user-nickname" %></li>
+      <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
+    </ul>
+  </div>
+</header>
+<div class='task-main'>
+  <div class='task-list'>
+    <div class='task-list-title'>タスク一覧</div>
+  </div>
+  <div class='task-right-contents'>
+    <div class='task-project-amount'>
+    </div>
+    <div class='completed-tasks'>
+    </div>
+  </div>
+</div>

@@ -83,13 +83,34 @@
   height: 10%;
 }
 
-.donation-button {
-  width: 50%;
+.click-form {
+  display: flex;
+  justify-content:space-around
+}
+
+.task-entrance {
+  width: 40%;
   height: 70px;
   border: 1px solid black;
   background-color: #AAAAAA;
   border-radius: 5px;
-  margin: 0 0 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.task-page-check {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+.project-donation-button {
+  width: 40%;
+  height: 70px;
+  border: 1px solid black;
+  background-color: #AAAAAA;
+  border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
