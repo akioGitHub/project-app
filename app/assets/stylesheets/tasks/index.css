@@ -1,0 +1,17 @@
+.task-header {
+  height: 10vh;
+  background-color: #222222;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.task-header-project {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.chat-entrance {
+  margin-right: 30px;
+}
