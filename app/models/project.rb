@@ -1,9 +1,9 @@
 class Project < ApplicationRecord
-  has_many :affiliations
+  has_many :affiliations, dependent: :destroy
   has_many :donations
   has_many :users, through: :affiliations, validate: false
-  has_many :rooms
-  has_one_attached :image
+  has_many :rooms, dependent: :destroy
+  has_one_attached :image, dependent: :destroy
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :category
   belongs_to :prefecture

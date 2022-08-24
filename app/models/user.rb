@@ -1,10 +1,10 @@
 class User < ApplicationRecord
-  has_many :affiliations
+  has_many :affiliations, dependent: :destroy
   has_many :projects, through: :affiliations
   has_many :donations
-  has_many :entering_the_rooms
+  has_many :entering_the_rooms, dependent: :destroy
   has_many :rooms, through: :entering_the_rooms
-  has_many :messages
+  has_many :messages, dependent: :destroy
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :sex
 

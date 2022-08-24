@@ -1,5 +1,6 @@
 class RoomsController < ApplicationController
   def index
+    @project = Project.find(params[:project_id])
   end
   
   def new
@@ -9,8 +10,8 @@ class RoomsController < ApplicationController
   def create
     @prject = Project.find(params[:project_id])
     @room = Room.new(room_params)
-    if @room.save!
-      redirect_to project_rooms_path
+    if @room.save
+      redirect_to project_rooms_path(current_user)
     else
       render :new
     end
