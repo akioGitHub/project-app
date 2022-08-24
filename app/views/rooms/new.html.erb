@@ -1,7 +1,7 @@
 <div class='chat-room-main'>
   <div class='chat-room-form'>
     <h1>新規チャットルーム</h1>
-    <%=form_with local: true do |f|%>
+    <%=form_with(model: @room, url: project_rooms_path, local: true) do |f|%>
       <div class='chat-room-form__field'>
         <div class='chat-room-form__field--left'>
           <%= f.label :room_name, :チャットルーム名, class: 'chat-room-form__label'%>

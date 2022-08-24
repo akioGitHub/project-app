@@ -39,10 +39,10 @@ Things you may want to cover:
 
 - has_many :affiliations
 - has_many :projects, through: :affiliations
-- has_many :user_tasks
-- has_many :tasks, through: :user_tasks
 - has_many :entering_the_rooms
-- has_many :rooms, through: :entering_the_rooms
+- has_many :tasks, through: :entering_the_rooms
+- has_many :room_users
+- has_many :rooms, through: :room_users
 - has_many :messages
 - has_many :donations
 

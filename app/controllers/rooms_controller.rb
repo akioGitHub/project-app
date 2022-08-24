@@ -7,9 +7,10 @@ class RoomsController < ApplicationController
   end
 
   def create
+    @prject = Project.find(params[:project_id])
     @room = Room.new(room_params)
-    if @room.save
-      redirect_to root_path
+    if @room.save!
+      redirect_to project_rooms_path
     else
       render :new
     end
@@ -24,7 +25,7 @@ class RoomsController < ApplicationController
   private
 
   def room_params
-    params.require(:room).permit(:room_name, user_ids: [])
+    params.require(:room).permit(:room_name, user_ids: []).merge(project_id: @prject.id)
   end
 
 end
