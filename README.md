@@ -39,7 +39,7 @@ Things you may want to cover:
 
 - has_many :affiliations
 - has_many :projects, through: :affiliations
-- has_many :tasks, through: :processes
+- has_many :entering_the_rooms
 - has_many :rooms, through: :entering_the_rooms
 - has_many :messages
 - has_many :donations
@@ -107,21 +107,7 @@ Things you may want to cover:
 
 ### Association
 
-- has_many :users, through: :processes
 - belongs_to :project
-
-
-## processes テーブル
-
-| Column | Type       | Options                        |
-| ------ | ---------- | ------------------------------ |
-| user   | references | null: false, foreign_key: true |
-| task   | references | null: false, foreign_key: true |
-
-### Association
-
-- belongs_to :user
-- belongs_to :task
 
 
 ## donations テーブル
@@ -165,6 +151,7 @@ Things you may want to cover:
 
 ### Association
 
+- has_many :entering_the_rooms
 - has_many :users, through: :entering_the_rooms
 - has_many :messages
 - belongs_to :project

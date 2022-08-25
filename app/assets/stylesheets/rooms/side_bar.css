@@ -1,0 +1,28 @@
+.side-bar-header {
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid white;
+}
+
+.header-name {
+  font-weight: bold;
+}
+
+.create-room {
+  border: 1px solid white;
+  padding: 10px;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.room {
+  margin: 30px 20px 0 0;
+  text-align: right;
+}
+
+.room-name {
+  font-size: 20px;
+  font-weight: bold;
+}

@@ -1,0 +1,57 @@
+<header class='task-header'>
+    <div class='logo'>
+      <%= link_to 'story', root_path, class: "top-link" %>
+    </div>
+    <div class='task-header-project'>
+      <%= link_to 'story-chat', project_rooms_path, class: "chat-entrance" %>
+      <%= link_to 'タスクを投稿する', new_project_task_path, class: "task-post" %>
+    </div>
+    <ul class='user'>
+      <li><%= link_to current_user.nickname, user_path(current_user), class: "user-nickname" %></li>
+      <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
+    </ul>
+</header>
+<div class='task-main'>
+
+  <div class='task-top'>
+    <div class='task-top-left'>
+      <h1 class='task-list-title'>タスク一覧</h1>
+    </div>
+    <div class='task-top-right'>
+      <h1 class='task-list-title'>支援状況</h1>
+    </div>
+  </div>
+
+  <div class='task-under'>
+
+    <div class='task-list'>
+      <div class='task-box'>
+        <ul class='task-lists'>
+          <% @task.each do |task| %>
+            <li class='list'>
+              <div class='index-task-title'>・<%= task.title %></div>
+              <div class='task-contents'>
+                <div class='index-task-item'><%= task.item %></div>
+                <div class='index-task-deadline'>期限 <%= task.deadline %></div>
+              </div>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+
+    <div class='task-right-contents'>
+      <div class='task-project-amount'>
+        <div class='task-project-donation-amount'>支援金額 1000000000円</div>
+        <div class='task-project-target-amount'>目標金額 <%= @project.donation_target_amount %>円</div>
+        <div class='task-project-donation-people'>支援者数 100人</div>
+      </div>
+      <h1 class='task-list-title'>完了済みタスク</h1>
+      <div class='completed-tasks'>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<%= render "shared/footer"%>
