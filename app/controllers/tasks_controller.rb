@@ -1,9 +1,9 @@
 class TasksController < ApplicationController
 
   def index
-    # @task = Task.find(params[:project_id])
     query = 'SELECT * FROM tasks ORDER BY id DESC '
     @task = Task.find_by_sql(query)
+    @project = Project.find(params[:project_id])
   end
 
   def new
