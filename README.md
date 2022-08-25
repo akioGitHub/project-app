@@ -40,9 +40,7 @@ Things you may want to cover:
 - has_many :affiliations
 - has_many :projects, through: :affiliations
 - has_many :entering_the_rooms
-- has_many :tasks, through: :entering_the_rooms
-- has_many :room_users
-- has_many :rooms, through: :room_users
+- has_many :rooms, through: :entering_the_rooms
 - has_many :messages
 - has_many :donations
 
@@ -109,22 +107,7 @@ Things you may want to cover:
 
 ### Association
 
-- has_many :user_tasks
-- has_many :users, through: :user_tasks
 - belongs_to :project
-
-
-## user_tasks テーブル
-
-| Column | Type       | Options                        |
-| ------ | ---------- | ------------------------------ |
-| user   | references | null: false, foreign_key: true |
-| task   | references | null: false, foreign_key: true |
-
-### Association
-
-- belongs_to :user
-- belongs_to :task
 
 
 ## donations テーブル

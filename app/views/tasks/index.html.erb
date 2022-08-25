@@ -4,7 +4,7 @@
     </div>
     <div class='task-header-project'>
       <%= link_to 'story-chat', project_rooms_path, class: "chat-entrance" %>
-      <%= link_to 'タスクを投稿する', "#", class: "task-post" %>
+      <%= link_to 'タスクを投稿する', new_project_task_path, class: "task-post" %>
     </div>
     <ul class='user'>
       <li><%= link_to current_user.nickname, user_path(current_user), class: "user-nickname" %></li>
@@ -13,7 +13,18 @@
 </header>
 <div class='task-main'>
   <div class='task-list'>
-    <div class='task-list-title'>タスク一覧</div>
+    <h1 class='task-list-title'>タスク一覧</h1>
+
+    <ul class='task-lists'>
+      <% @task.each do |task| %>
+        <li class='list'>
+          <div class='index-task-title'><%= task.title %></div>
+          <div class='index-task-item'><%= task.item %></div>
+          <div class='index-task-deadline'><%= task.deadline %></div>
+        </li>
+      <% end %>
+    </ul>
+
   </div>
   <div class='task-right-contents'>
     <div class='task-project-amount'>

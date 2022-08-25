@@ -1,0 +1,76 @@
+.task-new-main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-color: #444444;
+}
+
+.task-new-form {
+  width: 600px;
+  height: 500px;
+  background-color: #DDDDDD;
+  margin: auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+}
+
+.task-form {
+  width: 500px;
+}
+
+.task-form-fields {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.task-form-label {
+  font-weight: bold;
+}
+
+.task-form-input {
+  width: 100%;
+  height: 40px;
+  margin-top: 10px;
+}
+
+.task-form-field {
+  margin-bottom: 20px;
+}
+
+#task_deadline_1i {
+  width: 150px;
+  height: 20px;
+}
+
+#task_deadline_2i {
+  width: 150px;
+  height: 20px;
+}
+
+#task_deadline_3i {
+  width: 150px;
+  height: 20px;
+}
+
+.task-form-label {
+  width: 100%;
+}
+
+.task-form-date {
+  width: 150px;
+  margin: 0 0 0 auto;
+}
+
+.task-form-submit-btn {
+  margin: 0  auto;
+  width: 200px;
+  height: 50px;
+  margin-top: 20px;
+}
+
+.task-new-form-btn {
+  width: 100%;
+  height: 100%;
+}

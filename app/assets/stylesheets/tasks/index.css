@@ -1,3 +1,4 @@
+/* ヘッダー */
 .task-header {
   height: 10vh;
   background-color: #222222;
@@ -14,4 +15,25 @@
 
 .chat-entrance {
   margin-right: 30px;
+}
+
+/* メイン */
+.task-main {
+  height: 100vh;
+  background-color: 	#AAAAAA;
+  padding: 0 20px;
+}
+
+.task-list {
+  height: 100vh;
+  width: 50vw;
+  padding-top: 20px;
+}
+
+.task-list-title {
+  text-align: center;
+}
+
+.task-lists {
+  list-style: inside;
 }
