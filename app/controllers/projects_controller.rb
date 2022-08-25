@@ -1,6 +1,9 @@
 class ProjectsController < ApplicationController
   def index
     @latest_project = Project.order(updated_at: :desc).limit(1)
+    # Donation.limit(4).order('sum_price desc').group(:project_id).sum(:price)
+    @popular_project = Project.order(updated_at: :desc).limit(4)
+    
   end
 
   def new

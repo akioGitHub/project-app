@@ -20,15 +20,25 @@
         <% end %>
       <% end %>
     </div>
-    <div class='new-projects'>
-      <div class='over-new-projects'>
-        <div class='left-project'></div>
-        <div class='right-project'></div>
-      </div>
-      <div class='under-new-projects'>
-        <div class='left-project'></div>
-        <div class='right-project'></div>
-      </div>
+    <div class='popular-projects'>
+      <% @popular_project.each do |popular_project| %>
+        <%= link_to(project_path(popular_project.id), class: 'project-show-link') do %>
+          <div class='popular-projects-content'>
+            <div class='popular-project-img-content'>
+              <%= image_tag popular_project.image, class: "popular-project-img" %>
+              <div class='img-under-bar'></div>
+            </div>
+            <div class='popular-project-detail-content'>
+              <div class='popular-project-title'>
+                <%= popular_project.title %>
+              </div>
+              <div class='popular-project-donation'>
+                <p class='popular-project-donation-outcome'>現在    円  支援者数    人</p>
+              </div>
+            </div>
+          </div>
+        <% end %> 
+      <% end %>
     </div>
   </div>
 </div>

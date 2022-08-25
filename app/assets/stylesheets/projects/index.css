@@ -11,6 +11,7 @@
   padding: 10px 50px 0; 
 }
 
+/* latest-project */
 .latest-project {
   width: 50%;
   height: 100%;
@@ -62,42 +63,62 @@
   bottom: 0;
 }
 
-.new-projects {
+/* popular-project */
+.popular-projects {
   width: 50%;
   height: 100%;
   background-color: aliceblue;
+  line-height: 15px;
+  overflow: hidden;
+  display: flex;
+	flex-wrap: wrap;
+}
+
+.popular-projects > a {
+  width: 50%;
+  height: 50%;
   position: relative;
 }
 
-.over-new-projects {
+.popular-projects-content {
   width: 100%;
-  height: 48%;
-  background-color: aliceblue;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
+  height: 100%;
+}
+.popular-project-img-content {
+  width: 100%;
+  height: 70%;
+  line-height: 0;
 }
 
-.under-new-projects {
+.popular-project-img {
   width: 100%;
-  height: 48%;
-  background-color: aliceblue;
+  height: 100%;
+}
+
+.popular-project-detail-content {
+  width: 100%;
+  height: 20%;
+  margin-top: 10px;
+  color: black;
+  overflow: hidden;
+  
+}
+
+.popular-project-title {
+  font-weight: bold;
+  overflow: hidden;
+}
+
+.popular-project-donation {
+  height: 10%;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
+  color: black;
   position: absolute;
   bottom: 0;
 }
 
-.left-project {
-  width: 50%;
-  height: 100%;
-  background-color: aqua;
-  margin: 0 10px 20px 0;
-}
-
-.right-project {
-  width: 50%;
-  height: 100%;
-  background-color: aqua;
-  margin: 0 0 20px 10px;
+.popular-project-donation-outcome {
+  position: absolute;
+  bottom: 0;
 }
